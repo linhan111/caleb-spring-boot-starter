@@ -57,6 +57,8 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- 添加这个属性解决打出的jar包中出现boot-inf文件夹导致依赖方找不到依赖的问题 -->
+                <!-- 具体参考：https://blog.csdn.net/cdnight/article/details/88728359 -->
                 <configuration>
                     <skip>true</skip>
                 </configuration>
