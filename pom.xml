@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.demo</groupId>
     <artifactId>caleb-spring-boot-starter</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.0.6-SNAPSHOT</version>
     <name>caleb-spring-boot-starter</name>
     <description>Caleb's Demo project for Spring Boot</description>
     <packaging>jar</packaging>

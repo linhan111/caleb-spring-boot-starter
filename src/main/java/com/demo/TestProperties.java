@@ -8,21 +8,18 @@ import org.springframework.stereotype.Component;
 @Getter
 @ToString
 @NoArgsConstructor
-@AllArgsConstructor
 @Component
 @ConfigurationProperties(prefix = "spring.test")
 public class TestProperties {
     private String test1 = "tests1";
     private String test2 = "test2";
 
-    private Pool pool = new Pool();
+    private TestProperties.Pool pool;
 
     @Setter
     @Getter
     @NoArgsConstructor
-    @AllArgsConstructor
-    @ToString
-    private class Pool {
+    public static class Pool {
         private int min = 0;
         private int max = 10;
     }
