@@ -1,1 +1,4 @@
+# spring.factories是类似java spi的加载机制，实现原理为spring-core包中定义了SpringFactoriesLoader类，这个类实现了扫描META-INF/spring.factories文件
+# 多个需要初始化加载的类用反斜杠隔开
+# 详细参考：https://blog.csdn.net/lvoyee/article/details/82017057
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.demo.TestAutoConfiguration
