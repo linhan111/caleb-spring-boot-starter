@@ -28,8 +28,8 @@ public class ThreadPoolConfig {
                 5, TimeUnit.SECONDS,
                 new LinkedBlockingQueue<>(256),
                 r -> new Thread(r, "cpu-async-task-name-%d"), (r, executor) -> {
-            // 打印日志,添加监控等
-            System.out.println("task is rejected!");
+            // 打印日志，添加监控等，需要注意这里线程池的最大线程数，建议启动加上jvm指定heap memory等配置后使用压测工具测试，得到临界值
+            System.out.println("cpuTaskExecutor is rejected!");
         });
     }
 
@@ -40,8 +40,8 @@ public class ThreadPoolConfig {
                 5, TimeUnit.SECONDS,
                 new LinkedBlockingQueue<>(256),
                 r -> new Thread(r, "io-async-task-name-%d"), (r, executor) -> {
-            // 打印日志,添加监控等
-            System.out.println("task is rejected!");
+            // 打印日志，添加监控等
+            System.out.println("ioTaskExecutor is rejected!");
         });
     }
 }
